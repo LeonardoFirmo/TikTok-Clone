@@ -1,6 +1,8 @@
 
 import './App.css';
-import Video from './pages/Video'
+import Video from './pages/Video/Video';
+
+
 
 function App() {
   return (
