@@ -1,27 +1,29 @@
-import React, { useRef,useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Video.css";
+import VideoFooter from '../../components/footer/VideoFooter'
 
 function Video() {
-  const videoRef = useRef(null)
-  const [play, setPlay] = useState(false)
-  
-  function handleStart (){
-    if(!play){
-      setPlay(true)
-      videoRef.current.play()
-      return
+  const videoRef = useRef(null);
+  const [play, setPlay] = useState(false);
+
+  function handleStart() {
+   
+    if (!play) {
+      setPlay(true);
+      videoRef.current.play();
+      return;
     }
- 
-    videoRef.current.pause()
-    setPlay(false)
+
+    videoRef.current.pause();
+    setPlay(false);
   }
 
-  function handleNextVideo (){
-    videoRef.current.pause()
-    setPlay(false)
-    
+  function handleNextVideo() {
+    console.log("passou video");
+    videoRef.current.pause();
+    setPlay(false);
   }
- 
+
   return (
     <div className="video">
       <video 
@@ -33,6 +35,8 @@ function Video() {
         loop
       >
       </video>
+      <VideoFooter/>
+   
     </div>
   );
 }
