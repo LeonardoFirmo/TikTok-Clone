@@ -23,4 +23,12 @@
   .videoSidebar{
     top: 40%;
   }
-   }
+}
+
+@media only screen and (max-height: 600px) {
+  .videoSidebar{
+    top: 20%;
+  }
+}
+
+
