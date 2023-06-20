@@ -9,8 +9,8 @@ function App() {
   let maxHeight;
   if(window.innerHeight <= 800){
     maxHeight= window.innerHeight
-
   }
+  
   
   const [video, setVideos] = useState([]);
 
@@ -21,6 +21,7 @@ function App() {
     setVideos(videosList)
   }
 
+
   useEffect(()=>{
     getVideos();
   },[])
@@ -29,10 +30,10 @@ function App() {
     <div className="App" style={{maxHeight:maxHeight + "px"}}>
       <div className="app__videos">
 
-      {video.map((item)=>{
+      {video.map((item,i)=>{
         return (
           <Video
-          key={item.name}
+          key={i}
           likes={item.likes}
           messages={item.messages}
           shares={item.shares}

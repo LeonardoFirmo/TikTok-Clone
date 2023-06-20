@@ -20,11 +20,13 @@ function Video({likes, messages, shares, name, description, music, url}) {
   }
 
   function handleNextVideo() {
-    console.log("passou video");
     videoRef.current.pause();
     setPlay(false);
+
+    
   }
 
+  
   return (
     <div className="video">
       <video 
@@ -40,8 +42,8 @@ function Video({likes, messages, shares, name, description, music, url}) {
         likes={likes}
         messages={messages}
         shares={shares}
-    
       />
+      
       <VideoFooter
         name={name}
         description={description}
