@@ -22,7 +22,7 @@ function Video({likes, messages, shares, name, description, music, url}) {
   function handleNextVideo() {
     videoRef.current.pause();
     setPlay(false);
-
+    console.log('passou');
     
   }
 
@@ -34,6 +34,7 @@ function Video({likes, messages, shares, name, description, music, url}) {
         ref={videoRef}
         onClick={handleStart}
         onWheel={handleNextVideo}
+        onTouchMove={handleNextVideo}
         src={url}
         loop
       >
